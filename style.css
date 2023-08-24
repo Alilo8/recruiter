@@ -7,10 +7,10 @@
     --stroke: #F3F3F3;
     font-family: General;
 }
-html, body{
+*{
     margin: 0;
     padding: 0;
-    
+    box-sizing: border-box;
 }
 *::-webkit-scrollbar{
     display: none;
@@ -132,7 +132,7 @@ button:hover{
     padding: 2rem 3rem;
     border-right: 1px solid var(--stroke);
     width: 20%;
-    height: calc(100vh-2rem);
+    height: calc(100vh - 2rem);
 }
 .sidebar{
     margin-top: 3rem;
@@ -166,13 +166,10 @@ button:hover{
     fill: black;
 }
 /* -------Dashboard-Main------- */
-.dashboard-main{
+.main{
     padding: 1rem;
     width: 80%;
-    overflow: hidden;
-}
-.dashboard-main h1{
-    padding-left: 2rem;
+    min-height: calc(100vh - 2rem);
 }
 
 .overview-container{
@@ -218,11 +215,6 @@ button:hover{
 
 
 /* -------Clients------- */
-.clients-main{
-    padding: 1rem;
-    width: 80%;
-    height: calc(100vh - 2rem);
-}
 .clients-table{
     width: calc(100% - 3rem);
 }
@@ -365,7 +357,7 @@ input:focus{
 
 
 @media screen and (max-width: 967px) {
-    .dashboard-main{
+    .main{
         flex-direction: column;
     }
     .overview-container{
@@ -398,7 +390,7 @@ input:focus{
     .mobile-hide {
         display: none !important;
     }
-    .dashboard-main, .clients-main{
+    .main{
         width: 100%;
     }
     .sidebar{
@@ -411,6 +403,7 @@ input:focus{
         border-radius: 12px;
         box-shadow: 0px 0px 20px -10px rgba(55, 138, 253, 0.30);
         padding: 0;
+        height: fit-content;
     }
     .side-items-container{
         flex-direction: row;
