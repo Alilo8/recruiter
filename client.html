@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Dashboard</title>
+    <title>Document</title>
 </head>
 <body>
     <div class="flex justify-between dashboard">
@@ -90,81 +90,179 @@
             </nav>
         </div>
 
-        
-
-        <div class="main flex gap-md">
-            <div class="overview-container flex flex-col gap-sm">
-                <h1 class="font-bold font-2xl">Overview</h1>
-                <div class="box-container flex">
-                    <div class="box flex flex-col rounded-md gap-sm font-gray">
-                        This Month
-                        <span class="font-bold font-xl font-black">$3,699</span>
-                    </div>
-                    <div class="box flex flex-col rounded-md gap-sm font-gray">
-                        Last Month
-                        <span class="font-bold font-xl font-black">$3,699</span>
-                    </div>
-                </div>
-                <div class="flex flex-col gap-sm chart-container bg-white rounded-md">
-                    <span class="font-bold font-xl">Chart</span class="font-bold font-xl">
-                    <div class="stats-container flex justify-between">
-                        <div class="flex flex-col gap-sm">
-                            <div class="flex gap-xs items-center">
-                                <div class="rect blue"></div>Actual
-                            </div>
-                            <span class="font-bold font-lgr font-black">$3,699</span>
-                        </div>
-                        <div class="flex flex-col gap-sm">
-                            <div class="flex gap-xs items-center">
-                                <div class="rect gray"></div>Planned
-                            </div>
-                            <span class="font-bold font-lgr font-black">$3,699</span>                    </div>
-                        <div class="flex gap-sm items-center">
-                            <div class="flex flex-col gap-xs">
-                                <span class="font-gray">From</span>
-                                <span>Aug, 2023</span>
-                            </div>
-                            -
-                            <div class="flex flex-col gap-xs">
-                                <span class="font-gray">To</span>
-                                <span>Sep, 2023</span>
-                            </div>
-                        </div>
-                    </div>
-                    <canvas id="chart" class="w-full"></canvas>
-                </div>
+    <div class="main flex gap-sm">
+        <div class="overview-container flex flex-col gap-sm">
+            <div class="bg-white p-md flex justify-between items-center rounded-md">
+                <span class="name">Brooklyn</span>
+                <div class="border p-sm rounded-md"><div class="font-gray">Date</div>August, 2023</div>
             </div>
-            <div class="transactions-container flex flex-col gap-md rounded-md bg-white">
-                <span class="font-bold font-xl">Recent Transactions</span class="font-bold font-xl">
-                <div class="row flex justify-between font-gray">
-                    <span>Name</span>
-                    <span>Date</span>
-                    <span>Amount</span>
+            <div class="flex gap-sm">
+                <div class="flex flex-col bg-white card font-black rounded-md">
+                    <div class="p-md flex flex-col gap-sm">
+                        <span style="opacity: 0.5;">Planned</span>
+                        <div class="flex items-center gap-sm">
+                            <h1 class="font-bold font-2xl">$2,568</h1>
+                            <!-- <span class="growth negative">
+                                <img src="images/growth-negative.svg" alt="growth">
+                                5.6%
+                            </span> -->
+                        </div>
+                        <span class="font-gray">Recurring and one-time payments</span>
+                        <button>+ Add Planned</button>
+                    </div>
+                    <div class="border-top flex justify-between items-center">
+                        <div class="flex flex-col p-md gap-sm w-full">
+                            <div class="font-bold font-lg flex justify-between">
+                                Job Ad (x4)
+                                <img src="images/edit-icon.svg" alt="edit-icon">
+                            </div>
+                            <span class="border p-sm rounded-md" style="width: fit-content;">$40 / month</span>
+                        </div>
+                        <div class="p-md border-left flex items-center h-full">
+                            <img src="images/linearrow-right.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="border-top flex justify-between items-center">
+                        <div class="flex flex-col p-md gap-sm w-full">
+                            <div class="font-bold font-lg flex justify-between">
+                                Job Ad (x4)
+                                <img src="images/edit-icon.svg" alt="edit-icon">
+                            </div>
+                            <span class="border p-sm rounded-md" style="width: fit-content;">$40 / month</span>
+                        </div>
+                        <div class="p-md border-left flex items-center h-full">
+                            <img src="images/linearrow-right.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="border-top flex justify-between items-center">
+                        <div class="flex flex-col p-md gap-sm w-full">
+                            <div class="font-bold font-lg flex justify-between">
+                                Job Ad (x4)
+                                <img src="images/edit-icon.svg" alt="edit-icon">
+                            </div>
+                            <span class="border p-sm rounded-md" style="width: fit-content;">$40 / month</span>
+                        </div>
+                        <div class="p-md border-left flex items-center h-full">
+                            <img src="images/linearrow-right.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="border-top flex justify-between items-center">
+                        <div class="flex flex-col p-md gap-sm w-full">
+                            <div class="font-bold font-lg flex justify-between">
+                                Job Ad (x4)
+                                <img src="images/edit-icon.svg" alt="edit-icon">
+                            </div>
+                            <span class="border p-sm rounded-md" style="width: fit-content;">$40 / month</span>
+                        </div>
+                        <div class="p-md border-left flex items-center h-full">
+                            <img src="images/linearrow-right.svg" alt="">
+                        </div>
+                    </div>
                 </div>
-                <div class="row flex justify-between">
-                    <span>Name</span>
-                    <span class="font-gray">Date</span>
-                    <span>Amount</span>
-                </div>
-                <div class="row flex justify-between">
-                    <span>Name</span>
-                    <span class="font-gray">Date</span>
-                    <span>Amount</span>
-                </div>
-                <div class="row flex justify-between">
-                    <span>Name</span>
-                    <span class="font-gray">Date</span>
-                    <span>Amount</span>
+
+                <div class="flex flex-col bg-white card font-black rounded-md h-fit">
+                    <div class="p-md flex flex-col gap-sm">
+                        <span style="opacity: 0.5;">Planned</span>
+                        <div class="flex items-center gap-sm">
+                            <h1 class="font-bold font-2xl">$2,568</h1>
+                            <span class="growth negative">
+                                <img src="images/growth-negative.svg" alt="growth">
+                                5.6%
+                            </span>
+                        </div>
+                        <span class="font-gray">Recurring and one-time payments</span>
+                        <button>+ Add Planned</button>
+                    </div>
+                    <div class="border-top flex justify-between items-center">
+                        <div class="flex flex-col p-md gap-sm w-full">
+                            <div class="font-bold font-lg flex justify-between">
+                                Job Ad (x4)
+                                <img src="images/edit-icon.svg" alt="edit-icon">
+                            </div>
+                            <span class="border p-sm rounded-md" style="width: fit-content;">$40 / month</span>
+                        </div>
+                    </div>
+                    <div class="border-top flex justify-between items-center">
+                        <div class="flex flex-col p-md gap-sm w-full">
+                            <div class="font-bold font-lg flex justify-between">
+                                Job Ad (x4)
+                                <img src="images/edit-icon.svg" alt="edit-icon">
+                            </div>
+                            <span class="border p-sm rounded-md" style="width: fit-content;">$40 / month</span>
+                        </div>
+                    </div>
+                    <div class="border-top flex justify-between items-center">
+                        <div class="flex flex-col p-md gap-sm w-full">
+                            <div class="font-bold font-lg flex justify-between">
+                                Job Ad (x4)
+                                <img src="images/edit-icon.svg" alt="edit-icon">
+                            </div>
+                            <span class="border p-sm rounded-md" style="width: fit-content;">$40 / month</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-
-
-        
+        <div class="flex flex-col transactions-container bg-white rounded-md gap-md">
+            <div class="flex justify-between">
+                <h2>Client Details</h2>
+                <img style="margin-right: 10px;" src="images/dropdown-icon.svg" alt="dropdown">
+            </div>
+            <div class="flex justify-between">
+                <span class="font-gray">Agency:</span>
+                <span>Mitsubishi</span>
+            </div>
+            <div class="flex justify-between">
+                <span class="font-gray">Email:</span>
+                <span>curtis.weaver@example.com</span>
+            </div>
+            <div class="flex justify-between">
+                <span class="font-gray">Mobile:</span>
+                <span>(684) 555-0102</span>
+            </div>
+            <div class="flex justify-between">
+                <span class="font-gray">Xero client ID:</span>
+                <span>134567854655</span>
+            </div>
+            <div class="border-top" style="width: 120%; margin-left: -2rem;">
+            </div>
+            <h2>
+                Invoices
+            </h2>
+            <table class="font-sm">
+                <tr class="font-gray">
+                    <th class="text-start">Number</th>
+                    <th class="text-start">Status</th>
+                    <th class="text-start">Date</th>
+                    <th class="text-start">Amount</th>
+                </tr>
+                <tr>
+                    <td class="py-md">343646457</td>
+                    <td><span class="growth negative">Canceled</span></td>
+                    <td class="font-gray">10 Jul, 2023</td>
+                    <td>$300</td>
+                </tr>
+                <tr>
+                    <td class="py-md">343646457</td>
+                    <td><span class="growth positive">Done</span></td>
+                    <td class="font-gray">10 Jul, 2023</td>
+                    <td>$300</td>
+                </tr>
+                <tr>
+                    <td class="py-md">343646457</td>
+                    <td><span class="growth normal">In Progress</span></td>
+                    <td class="font-gray">10 Jul, 2023</td>
+                    <td>$300</td>
+                </tr>
+                <tr>
+                    <td class="py-md">343646457</td>
+                    <td><span class="growth negative">Canceled</span></td>
+                    <td class="font-gray">10 Jul, 2023</td>
+                    <td>$300</td>
+                </tr>
+            </table>
+        </div>
     </div>
-    <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
-    </script>
     <script src="script.js"></script>
 </body>
 </html>
