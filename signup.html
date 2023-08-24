@@ -1,43 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Sign Up</title>
-</head>
-<body>
-    <div class="signup-container flex">
-        <img src="images/signup-bg.jpeg" alt="background">
-        <form class="signup flex flex-col justify-center items-center gap-sm">
-            <h1 class="text-center">Welcome back to Cost Management Dashboard</h1>
-            <span class="text-center">To start using the service, sign in to your account</span>
-            <div class="relative">
-                <input class="signup-input" type="search" required placeholder=" ">
-                <div class="absolute flex flex-col justify-center">
-                    <label class="label1">Your Email</label> 
-                    <label class="label2">Your Email</label>
+  </head>
+  <body>
+    <div class="main-body flex justify-between">
+      <div class="form-image flex align-center justify-center">
+        <!-- <img src="images/app-homepage1.png" alt="" /> -->
+      </div>
+      <div class="form-body">
+        <div class="form-body-container">
+          <section id="form" class="form">
+            <form action="#" id="signForm">
+              <img src="images/logo.svg" alt="" />
+              <h3>Welcome back to Cost Management Dashboard</h3>
+              <p>To start using the service, sign in to your account.</p>
+              <div class="form-group flex flex-col align-start">
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  placeholder="Your Name"
+                />
+              </div>
+
+              <div class="form-group flex flex-col align-start">
+                <div class="password-wrap">
+                  <input
+                    type="password"
+                    id="password"
+                    required
+                    name="password"
+                    placeholder="Password"
+                  />
+                  <img class="eye" src="images/eye.svg" alt="" tabindex="0" />
                 </div>
-                <div class="input-icon search-cancel">
-                    <img src="images/close-circe.svg" alt="close">
-                </div>
-            </div>
-            <div class="relative">
-                <input class="signup-input" id="input1" type="password" required placeholder=" ">
-                <div class="absolute flex flex-col justify-center">
-                    <label class="label1">Password</label> 
-                    <label class="label2">Password</label>
-                </div>
-                <div class="input-icon" onclick="togglePassword('input1')">
-                    <img src="images/eye-circle.svg" alt="close">
-                </div>
-                <div id="forgot-password" class="w-full">
-                    Forgot Password?
-                </div>
-            </div>
-            <button id="sign-in-btn">Sign In</button>
-        </form>
+              </div>
+              <div class="form-group flex">
+                <a class="forgot-password-btn" href="#">Forgot Password?</a>
+              </div>
+
+              <div class="form-group">
+                <button type="submit" class="btn">Register</button>
+              </div>
+            </form>
+          </section>
+        </div>
+      </div>
     </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
