@@ -63,7 +63,15 @@ new Chart("chart", {
 });
 
 
-function func(){
+function loadName(){
   const href = window.location.href;
-  href.slice(href.indexOf('=')+1)
+  const name = href.slice(href.indexOf('=')+1).replace('_',' ');
+  const ele = document.getElementById('name');
+  ele.innerHTML = name;
+}
+
+
+function toggleWindow(){
+  const e = document.getElementById('window')
+  e.classList.toggle('active')
 }
