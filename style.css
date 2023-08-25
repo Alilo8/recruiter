@@ -13,7 +13,6 @@
     box-sizing: border-box;
 }
 *::-webkit-scrollbar {
-  display: none;
 }
 html {
     font-family: General Sans, sans-serif;
@@ -63,6 +62,9 @@ html {
 .text-start{
   text-align: start;
 }
+.text-end{
+  text-align: end;
+}
 .justify-between {
   justify-content: space-between;
 }
@@ -97,7 +99,7 @@ html {
   padding: 5px;
 }
 .p-sm{
-  padding: 10px;
+  padding: 10px !important;
 }
 .p-md {
   padding: 1rem;
@@ -152,6 +154,15 @@ html {
 }
 .border-left {
   border-left: 1px solid var(--stroke);
+}
+.hidden{
+  display: none;
+}
+.nowrap{
+  white-space: nowrap;
+}
+.wrap{
+  flex-wrap: wrap;
 }
 button {
   padding: 0.7rem;
@@ -414,6 +425,7 @@ form {
 /* -------Dashboard------- */
 .dashboard {
   background-color: var(--bg_color);
+  min-height: 100vh;
 }
 /* -------Sidebar------- */
 .sidebar-container{
@@ -421,7 +433,8 @@ form {
     padding: 2rem 3rem;
     border-right: 1px solid var(--stroke);
     width: 20%;
-    height: calc(100vh - 2rem);
+    height: 100vh;
+    z-index: 30;
 }
 .sidebar {
   margin-top: 3rem;
@@ -496,8 +509,8 @@ form {
   overflow: hidden;
 }
 .row {
-  gap: 40px;
   padding: 1rem 1.5rem;
+  min-width: 60rem;
 }
 .head {
   padding: 0.7rem 1.5rem;
@@ -513,6 +526,8 @@ input {
   border: 1px solid var(--stroke);
   border-radius: 8px;
   outline-color: var(--blue);
+  font-size: 16px;
+  z-index: 0;
 }
 .search-input {
   padding: 0.7rem 2rem;
@@ -557,6 +572,7 @@ input {
   width: 50%;
 }
 .growth{
+  font-size: 14px;
   padding: 3px 6px;
   border-radius: 6px;
   font-weight: 600;
@@ -573,11 +589,50 @@ input {
   background-color: #FFFCE1;
   color: #EDBE17;
 }
+#dropdown{
+  display: none;
+  right: 0;
+  top: 1.5rem;
+  width: 10rem;
+  z-index: 10;
+  box-shadow: 0px 0px 20px -10px rgba(55, 138, 253, 0.4);
+}
+#dropdown.active{
+  display: inline;
+}
+#dropdown div:hover{
+  background-color: var(--stroke);
+  cursor: pointer;
+}
+.popup{
+  display: none;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 30;
+  top: 0;
+}
+.popup.active{
+  display: flex;
+}
+.popup > div{
+  opacity: 1;
+  width: 22rem;
+  box-shadow: 0px 0px 20px -10px rgba(55, 138, 253, 0.4);
+  padding: 1.5rem;
+  z-index: 30;
+}
+.delete-btn{
+  color: #F82563; 
+  background-color: #FFF0F5;
+}
+.delete-btn:hover{
+  background-color: #ffd4e2;
+}
 
 
 /* -----Window----- */
 .window{
-  display: none;
   background-color: white;
   z-index: 10;
   height: 100vh;
@@ -586,9 +641,11 @@ input {
   right: 0;
   position: fixed;
   box-shadow: 0px 0px 20px -10px rgba(55, 138, 253, 0.3);
+  translate: 100% 0;
+  transition: translate 0.2s ease-in;
 }
 .window.active{
-  display: flex;
+  translate: 0 0;
 }
 .special-input{
   width: 25rem;
@@ -620,6 +677,7 @@ input {
   top: 0.5rem;
 }
 .special-input::placeholder{
+  opacity: 0.3;
   font-size: medium;
   visibility: hidden;
   transition: visibility 0.1s ease-out;
@@ -629,7 +687,7 @@ input {
 }
 .label1 + img{
   position: absolute;
-  bottom: 1rem;
+  bottom: 0.9rem;
   right: 1rem;
   pointer-events: none;
 }
@@ -666,9 +724,23 @@ input {
   color: black;
   font-weight: 500;
 }
+
 .add-cost-btn.active{
   background-color: white;
   box-shadow: 0px 0px 20px -10px rgba(55, 138, 253, 0.4);
+}
+.add-cost-btn:hover{
+  background-color: var(--gray);
+}
+
+/* ------Reset Password------ */
+.reset-pw{
+  width: 25rem;
+}
+.eye{
+  position: absolute;
+  bottom: 0.9rem;
+  right: 1rem;
 }
 
 @media screen and (max-width: 1067px) {
