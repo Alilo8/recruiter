@@ -1,5 +1,4 @@
 const eye = document.querySelectorAll(".eye");
-console.log(eye);
 
 if (eye.length > 0) {
   eye.forEach((item) => {
@@ -122,6 +121,17 @@ function togglePopup(n){
   e.classList.toggle('active')
 }
 
+function toggleCalendar(e){
+  const calendar = e.querySelector('.calendar')
+  e.classList.toggle('active')
+  calendar.classList.toggle('active')
+}
+
+function removeCalendar(e){
+  const calendar = e.querySelector('.calendar')
+  e.classList.remove('active')
+  calendar.classList.remove('active')
+}
 
 function loadSidebar(active){
   let html = `
@@ -208,7 +218,7 @@ function loadSidebar(active){
   </nav>
   <div id="popup1" class="popup flex justify-center items-center">
       <div class="bg-white rounded-md flex flex-col justify-center text-center gap-md items-center">
-          <h2>Are you sure you want to log out?</h2>
+          <div class="font-bold font-lgr">Are you sure you want to log out?</div>
           <div>If you agree, you will be logged out of your account</div>
           <button onclick="togglePopup(1)" class="w-full p-md">No, I want to stay</button>
           <a class="w-full" href="signup.html"><button class="w-full add-cost-btn p-md" style="font-weight: 600;">Yes, log me out</button></a>

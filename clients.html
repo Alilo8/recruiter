@@ -12,7 +12,7 @@
         <div class="main flex flex-col gap-sm ">
             <div class="clients-table flex flex-col bg-white rounded-md">
                 <div class="flex search-bar justify-between items-center">
-                    <h1 class="m-0">Clients</h1>
+                    <div class="m-0 font-bold font-xl">Clients</div>
                     <div class="relative flex gap-sm">
                         <input class="search-input" type="text" placeholder="Type information about the client" name="" id="">
                         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -22,50 +22,55 @@
                         <button onclick="toggleWindow()">Add New Client</button>
                     </div>
                 </div>
-                <div class="flex flex-col gap-sm" style="overflow-x: scroll;">
-                    <div class="row border-top head flex justify-between items-center font-gray">
-                        <span class="w-md">Name</span>
-                        <span class="w-md">Agency</span>
-                        <span class="w-md">Email</span>
-                        <span class="w-md">Mobile</span>
-                        <button style="opacity: 0; pointer-events: none;">Client Details</button>
-                    </div>
-                    <div class="row border-top flex justify-between items-center">
-                        <span class="w-md">Brooklyn Simmons</span>
-                        <span class="w-md">Mitsubishi</span>
-                        <span class="w-md">curtis.weaver@example.com</span>
-                        <span class="w-md">(684) 555-0102</span>
-                        <a href="client.html?name=Brooklyn_Simmons"><button class="odd-btn">Client Details</button></a>
-                    </div>
-                    <div class="row border-top flex justify-between items-center">
-                        <span class="w-md">Bessie Cooper</span>
-                        <span class="w-md">Agency</span>
-                        <span class="w-md">Email</span>
-                        <span class="w-md">Mobile</span>
-                        <a href="client.html?name=Bessie_Cooper"><button class="odd-btn">Client Details</button></a>
-                    </div>
-                    <div class="row border-top flex justify-between items-center">
-                        <span class="w-md">Theresa Webb</span>
-                        <span class="w-md">Agency</span>
-                        <span class="w-md">nathan.roberts@example.com</span>
-                        <span class="w-md">Mobile</span>
-                        <a href="client.html?name=Theresa_Webb"><button class="odd-btn">Client Details</button></a>
-                    </div>
-                    <div class="row border-top flex justify-between items-center">
-                        <span class="w-md">Savannah Nguyen</span>
-                        <span class="w-md">Agency</span>
-                        <span class="w-md">Email</span>
-                        <span class="w-md">Mobile</span>
-                        <a href="client.html?name=Savannah_Nguyen"><button class="odd-btn">Client Details</button></a>
-                    </div>
-                    <div class="row border-top flex justify-between items-center">
-                        <span class="w-md">Esther Howard</span>
-                        <span class="w-md">Agency</span>
-                        <span class="w-md">Email</span>
-                        <span class="w-md">Mobile</span>
-                        <a href="client.html?name=Esther_Howard"><button class="odd-btn">Client Details</button></a>
-                    </div>
+                <div style="overflow-x: scroll;">
+                        <table class="w-full">
+                            <tr class="font-gray">
+                                <td class="border-top p-first">Name</td>
+                                <td class="border-top p-row">Agency</td>
+                                <td class="border-top p-row">Email</td>
+                                <td class="border-top p-row" style="padding-right: 0;">Mobile</td>
+                                <td class="border-top p-last text-end" style="padding-left: 0;"></td>
+                            </tr>
+                            <tr>
+                                <td class="border-top p-first">Brooklyn Simmons</td>
+                                <td class="border-top p-row">Mitsubishi</td>
+                                <td class="border-top p-row font-gray">curtis.weaver@example.com</td>
+                                <td class="border-top p-row font-gray" style="padding-right: 0;">(684) 555-0102</td>
+                                <td class="border-top p-last text-end" style="padding-left: 0;">
+                                    <a href="client.html?name=Brooklyn_Simmons"><button class="odd-btn">Client Details</button></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="border-top p-first">Brooklyn Simmons</td>
+                                <td class="border-top p-row">Mitsubishi</td>
+                                <td class="border-top p-row font-gray">curtis.weaver@example.com</td>
+                                <td class="border-top p-row font-gray" style="padding-right: 0;">(684) 555-0102</td>
+                                <td class="border-top p-last text-end" style="padding-left: 0;">
+                                    <a href="client.html?name=Brooklyn_Simmons"><button class="odd-btn">Client Details</button></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="border-top p-first">Brooklyn Simmons</td>
+                                <td class="border-top p-row">Mitsubishi</td>
+                                <td class="border-top p-row font-gray">curtis.weaver@example.com</td>
+                                <td class="border-top p-row font-gray" style="padding-right: 0;">(684) 555-0102</td>
+                                <td class="border-top p-last text-end" style="padding-left: 0;">
+                                    <a href="client.html?name=Brooklyn_Simmons"><button class="odd-btn">Client Details</button></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="border-top p-first">Brooklyn Simmons</td>
+                                <td class="border-top p-row">Mitsubishi</td>
+                                <td class="border-top p-row font-gray">curtis.weaver@example.com</td>
+                                <td class="border-top p-row font-gray" style="padding-right: 0;">(684) 555-0102</td>
+                                <td class="border-top p-last text-end" style="padding-left: 0;">
+                                    <a href="client.html?name=Brooklyn_Simmons"><button class="odd-btn">Client Details</button></a>
+                                </td>
+                            </tr>
+                            
+                        </table>
                 </div>
+                
             </div>
             <div class="flex gap-xs w-full justify-center">
                 <button class="odd-btn page-btn"><img src="images/arrow-left.svg" alt="arrow-left"></button>

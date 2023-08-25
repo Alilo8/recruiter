@@ -10,7 +10,7 @@
     <div class="flex justify-between dashboard">
         <div class="main flex gap-md">
             <div class="overview-container flex flex-col gap-sm">
-                <h1 class="font-bold font-2xl">Overview</h1>
+                <div class="font-bold font-xl">Overview</div>
                 <div class="box-container flex">
                     <div class="box flex flex-col rounded-md gap-sm font-gray">
                         This Month
@@ -49,14 +49,56 @@
                             </span>                
                         </div>
                         <div class="flex gap-sm font-sm items-center justify-between">
-                            <div class="border p-sm rounded-md">
+                            <div onclick="toggleCalendar(this)" onblur="toggleCalendar(this)" tabindex="0" class="pointer border p-sm rounded-md relative date-btn">
                                 <div class="font-gray">From</div>
                                 <span class="nowrap">August, 2023</span>
+                                <div class="calendar absolute flex flex-col bg-white">
+                                    <div class="flex items-center justify-between p-md">
+                                        <img class="pointer" src="images/arrow-left.svg" alt="arrow-left">
+                                        <span class="font-bold font-lg">2023</span>
+                                        <img class="pointer" src="images/arrow-right.svg" alt="arrow-right">
+                                    </div>
+                                    <div class="flex border-top p-md gap-xs items-center justify-center" style="flex-wrap: wrap;">
+                                        <button class="cal-btn" style="padding: 0.8rem 1.4rem;">Jan</button>
+                                        <button class="cal-btn" style="padding: 0.8rem 1.4rem;">Feb</button>
+                                        <button class="cal-btn" style="padding: 0.8rem 1.4rem;">Mar</button>
+                                        <button class="cal-btn" style="padding: 0.8rem 1.4rem;">Apr</button>
+                                        <button class="cal-btn" style="padding: 0.8rem 1.4rem;">May</button>
+                                        <button class="cal-btn" style="padding: 0.8rem 1.4rem;">Jun</button>
+                                        <button class="cal-btn" style="padding: 0.8rem 1.4rem;">July</button>
+                                        <button class="cal-btn active" style="padding: 0.8rem 1.4rem;">Aug</button>
+                                        <button class="cal-btn" style="padding: 0.8rem 1.4rem;">Sep</button>
+                                        <button class="cal-btn" style="padding: 0.8rem 1.4rem;">Oct</button>
+                                        <button class="cal-btn" style="padding: 0.8rem 1.4rem;">Nov</button>
+                                        <button class="cal-btn" style="padding: 0.8rem 1.4rem;">Dec</button>
+                                    </div>
+                                </div>
                             </div>
                             -
-                            <div class="border p-sm rounded-md">
+                            <div onclick="toggleCalendar(this)" onblur="toggleCalendar(this)" tabindex="0" class="pointer border p-sm rounded-md relative date-btn">
                                 <div class="font-gray">To</div>
                                 <span class="nowrap">Sept, 2023</span>
+                                <div class="calendar absolute flex flex-col bg-white">
+                                    <div class="flex items-center justify-between p-md">
+                                        <img class="pointer" src="images/arrow-left.svg" alt="arrow-left">
+                                        <span class="font-bold font-lg">2023</span>
+                                        <img class="pointer" src="images/arrow-right.svg" alt="arrow-right">
+                                    </div>
+                                    <div class="flex border-top p-md gap-xs items-center justify-center" style="flex-wrap: wrap;">
+                                        <button class="cal-btn" style="padding: 0.8rem 1.4rem;">Jan</button>
+                                        <button class="cal-btn" style="padding: 0.8rem 1.4rem;">Feb</button>
+                                        <button class="cal-btn" style="padding: 0.8rem 1.4rem;">Mar</button>
+                                        <button class="cal-btn" style="padding: 0.8rem 1.4rem;">Apr</button>
+                                        <button class="cal-btn" style="padding: 0.8rem 1.4rem;">May</button>
+                                        <button class="cal-btn" style="padding: 0.8rem 1.4rem;">Jun</button>
+                                        <button class="cal-btn" style="padding: 0.8rem 1.4rem;">July</button>
+                                        <button class="cal-btn" style="padding: 0.8rem 1.4rem;">Aug</button>
+                                        <button class="cal-btn active" style="padding: 0.8rem 1.4rem;">Sep</button>
+                                        <button class="cal-btn" style="padding: 0.8rem 1.4rem;">Oct</button>
+                                        <button class="cal-btn" style="padding: 0.8rem 1.4rem;">Nov</button>
+                                        <button class="cal-btn" style="padding: 0.8rem 1.4rem;">Dec</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

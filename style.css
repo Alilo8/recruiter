@@ -12,8 +12,11 @@
     padding: 0;
     box-sizing: border-box;
 }
-*::-webkit-scrollbar {
+@font-face {
+  font-family: General Sans;
+  src: url(fonts/GeneralSans-Variable.ttf);
 }
+
 html {
     font-family: General Sans, sans-serif;
     scroll-behavior: smooth;
@@ -92,6 +95,15 @@ html {
 .w-full {
   width: 100%;
 }
+.p-first{
+  padding: 1.7rem .5rem 1.7rem 1rem;
+}
+.p-last{
+  padding: 1.7rem 1rem 1.7rem .5rem;
+}
+.p-row{
+  padding: 1.7rem .5rem;
+}
 .px-md{
   padding: 1rem 0;
 }
@@ -163,6 +175,9 @@ html {
 }
 .wrap{
   flex-wrap: wrap;
+}
+.pointer{
+  cursor: pointer;
 }
 button {
   padding: 0.7rem;
@@ -480,10 +495,10 @@ form {
   width: 60%;
 }
 .box-container {
-  gap: 1rem;
+  gap: 10px;
 }
 .box {
-  padding: 1rem 4rem 1rem 2rem;
+  padding: 1rem 3.5rem 1rem 2rem;
   background-color: white;
 }
 .chart-container {
@@ -501,6 +516,36 @@ form {
 }
 #chart {
   margin: 2rem 0;
+}
+.calendar{
+  display: none;
+  left: 0;
+  top: 4rem;
+  width: 23.5rem;
+  z-index: 10;
+  box-shadow: 0px 0px 20px -10px rgba(55, 138, 253, 0.4);
+}
+.calendar.active{
+  display: flex;
+}
+.cal-btn {
+  background-color: white;
+  color: var(--gray);
+  font-weight: 500;
+  font-size: 16px;
+  width: 5rem;
+  border: 1px solid var(--stroke);
+  text-align: center;
+}
+.cal-btn:hover{
+  background-color: var(--stroke);
+}
+.cal-btn.active{
+  border-color: var(--blue);
+  color: black;
+}
+.date-btn.active{
+  border-color: var(--blue);
 }
 /* -------Transactions------- */
 .transactions-container {
@@ -532,10 +577,11 @@ input {
 .search-input {
   padding: 0.7rem 2rem;
   background-color: var(--bg_color);
+  width: 20rem;
 }
 .search-input + svg {
   position: absolute;
-  top: 10px;
+  top: 12px;
   left: 10px;
 }
 .search-input:focus + svg path {
@@ -768,6 +814,17 @@ input {
     .clients-table{
         width: 100% !important;
     }
+    .calendar{
+      margin-left: -2rem;
+      right: 0;
+      left: auto;
+      width: 16rem;
+    }
+    .cal-btn{
+      font-size: 14px !important;
+      width: 3rem;
+      padding: .5rem !important;
+    }
 }
 @media screen and (max-width: 867px) {
   .signup-container > img {
@@ -783,7 +840,8 @@ input {
     }
     .main{
         width: 100%;
-        margin: 0;
+        max-height: calc(100vh - 5rem);
+        margin: 0 0 6rem 0;
     }
     .sidebar{
         margin: 0;
@@ -830,4 +888,29 @@ input {
     .window-btn{
       width: calc(100vw - 2rem);
     }
+    .search-input{
+      width: 15rem;
+    }
+    .window form{
+      padding: .5rem;
+      gap: .5rem;
+    }
+    .window-btn{
+      bottom: 4rem;
+    }
+    .reset-pw{
+      width: 18rem;
+    }
+    .flex-col-sm{
+      flex-direction: column;
+    }
+    .card{
+      width: 100%;
+    }
+}
+@media screen and (max-width: 567px) {
+  .calendar{
+    left: 0;
+    right: auto;
+  }
 }

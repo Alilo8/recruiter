@@ -13,10 +13,34 @@
             <div class="overview-container flex flex-col gap-sm">
                 <div class="bg-white p-md flex justify-between items-center rounded-md">
                     <span class="name"></span>
-                    <div class="border p-sm rounded-md"><div class="font-gray">Date</div>August, 2023</div>
+                    <div onclick="toggleCalendar(this)" onblur="removeCalendar(this)" tabindex="0" class="pointer border p-sm rounded-md relative date-btn">
+                        <div class="font-gray">Date</div>
+                        <span class="nowrap">August, 2023</span>
+                        <div class="calendar absolute flex flex-col bg-white">
+                            <div class="flex items-center justify-between p-md">
+                                <img class="pointer" src="images/arrow-left.svg" alt="arrow-left">
+                                <span class="font-bold font-lg">2023</span>
+                                <img class="pointer" src="images/arrow-right.svg" alt="arrow-right">
+                            </div>
+                            <div class="flex border-top p-md gap-xs items-center justify-center" style="flex-wrap: wrap;">
+                                <button class="cal-btn" style="padding: 0.8rem 1.4rem;">Jan</button>
+                                <button class="cal-btn" style="padding: 0.8rem 1.4rem;">Feb</button>
+                                <button class="cal-btn" style="padding: 0.8rem 1.4rem;">Mar</button>
+                                <button class="cal-btn" style="padding: 0.8rem 1.4rem;">Apr</button>
+                                <button class="cal-btn" style="padding: 0.8rem 1.4rem;">May</button>
+                                <button class="cal-btn" style="padding: 0.8rem 1.4rem;">Jun</button>
+                                <button class="cal-btn" style="padding: 0.8rem 1.4rem;">July</button>
+                                <button class="cal-btn" style="padding: 0.8rem 1.4rem;">Aug</button>
+                                <button class="cal-btn active" style="padding: 0.8rem 1.4rem;">Sep</button>
+                                <button class="cal-btn" style="padding: 0.8rem 1.4rem;">Oct</button>
+                                <button class="cal-btn" style="padding: 0.8rem 1.4rem;">Nov</button>
+                                <button class="cal-btn" style="padding: 0.8rem 1.4rem;">Dec</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="flex gap-sm">
-                    <div class="flex flex-col bg-white card font-black rounded-md">
+                <div class="flex gap-sm flex-col-sm">
+                    <div class="flex flex-col bg-white card font-black rounded-md w-full">
                         <div class="p-md flex flex-col gap-sm">
                             <span style="opacity: 0.5;">Planned</span>
                             <div class="flex items-center gap-sm stats">
@@ -124,7 +148,7 @@
             </div>
             <div class="flex flex-col transactions-container bg-white rounded-md gap-md">
                 <div class="flex justify-between">
-                    <h2>Client Details</h2>
+                    <h2 class="font-bold">Client Details</h2>
                     <div class="relative" onblur="removeDropdown()" tabindex="0">
                         <div style="margin-right: 10px; cursor: pointer;" onclick="toggleDropdown()">
                             <img src="images/dropdown-icon.svg" alt="dropdown">
@@ -153,7 +177,7 @@
                 </div>
                 <div class="border-top" style="width: 120%; margin-left: -2rem;">
                 </div>
-                <h2>
+                <h2 class="font-bold">
                     Invoices
                 </h2>
                 <table class="font-sm">
@@ -230,7 +254,7 @@
 
     <div id="popup2" class="popup flex justify-center items-center">
         <div class="bg-white rounded-md flex flex-col justify-center text-center gap-md items-center">
-            <h2>Are you sure you want to delete <span class="name"></span>?</h2>
+            <div class="font-bold font-lgr">Are you sure you want to delete <span class="name"></span>?</div>
             <div>If you delete this client, you can't get it back</div>
             <button onclick="togglePopup(2)" class="w-full p-md">No, I don't want to</button>
             <button onclick="togglePopup(2)" class="w-full delete-btn p-md">Yes, delete</button>
