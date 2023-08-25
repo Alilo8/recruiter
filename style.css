@@ -587,6 +587,20 @@ input {
 .search-input:focus + svg path {
   stroke: var(--gray);
 }
+.search-result{
+  display: none;
+  box-shadow: 0px 0px 20px -10px rgba(55, 138, 253, 0.4);
+  left: 0;
+  top: 3rem;
+  width: 20rem;
+}
+.search-result div:hover{
+  background-color: var(--stroke);
+}
+.search-input:focus ~ .search-result{
+  display: flex;
+}
+
 .odd-btn {
   background-color: white;
   box-shadow: 0px 0px 20px -10px rgba(55, 138, 253, 0.4);
@@ -889,6 +903,9 @@ input {
       width: calc(100vw - 2rem);
     }
     .search-input{
+      width: 15rem;
+    }
+    .search-result{
       width: 15rem;
     }
     .window form{
